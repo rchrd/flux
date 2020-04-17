@@ -1,6 +1,6 @@
 version: 1
-scanForFiles: {}
+# scanForFiles: {}
 patchUpdated:
   generators:
-  - command: kustomize build .
+  - command: kustomize build open-policy-agent
   patchFile: flux-patch.yaml
