@@ -10,15 +10,3 @@ configMapGenerator:
   literals:
     - key=value
 
-- name: opa-default-system-main
-  files:
-  - policies/main.rego
-
-- name: istio
-  files:
-  - policies/istio.rego
-
-generatorOptions:
-  disableNameSuffixHash: true
-  labels:
-    openpolicyagent.org/policy: rego
