@@ -1,0 +1,5 @@
+version: 1
+scanForFiles: {}
+commandUpdated:
+  generators:
+  - command: kubectl apply -f -
