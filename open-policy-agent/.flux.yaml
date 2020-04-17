@@ -1,5 +1,6 @@
 version: 1
 scanForFiles: {}
-commandUpdated:
+patchUpdated:
   generators:
-  - command: kubectl apply -f -
+  - command: kustomize build .
+  patchFile: flux-patch.yaml
