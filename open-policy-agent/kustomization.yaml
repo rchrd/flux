@@ -1,6 +1,7 @@
 ---
 resources:
-  - namespace.yaml
+- namespace.yaml
+- opa.yaml
 
 namespace: opa
 
