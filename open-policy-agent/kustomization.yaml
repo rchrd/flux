@@ -6,6 +6,10 @@ resources:
 namespace: opa
 
 configMapGenerator:
+- name: test-cm
+  literals:
+    - key=value
+
 - name: opa-default-system-main
   files:
   - policies/main.rego
