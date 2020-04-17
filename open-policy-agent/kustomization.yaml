@@ -3,10 +3,23 @@ resources:
 - namespace.yaml
 - opa.yaml
 
-namespace: opa
-
 configMapGenerator:
 - name: test-cm
+  namespace: opa
   literals:
     - key=value
 
+- name: opa-default-system-main
+  namespace: opa
+  files:
+  - policies/main.rego
+
+- name: istio
+  namespace: opa
+  files:
+  - policies/istio.rego
+
+generatorOptions:
+  disableNameSuffixHash: true
+  labels:
+    openpolicyagent.org/policy: rego
