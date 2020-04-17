@@ -1,5 +1,5 @@
 version: 1
-# scanForFiles: {}
+scanForFiles: {}
 patchUpdated:
   generators:
   - command: kustomize build open-policy-agent
