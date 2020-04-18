@@ -1,7 +1,7 @@
 ---
 resources:
 - namespace.yaml
-- opa.yaml
+# - opa.yaml
 
 configMapGenerator:
 - name: test-cm
@@ -9,15 +9,15 @@ configMapGenerator:
   literals:
     - key=value
 
-- name: opa-default-system-main
-  namespace: opa
-  files:
-  - policies/main.rego
+# - name: opa-default-system-main
+#   namespace: opa
+#   files:
+#   - policies/main.rego
 
-- name: istio
-  namespace: opa
-  files:
-  - policies/istio.rego
+# - name: istio
+#   namespace: opa
+#   files:
+#   - policies/istio.rego
 
 generatorOptions:
   disableNameSuffixHash: true
