@@ -1,23 +1,18 @@
 ---
 resources:
 - namespace.yaml
-# - opa.yaml
+- opa.yaml
 
 configMapGenerator:
-- name: test-cm
+- name: opa-default-system-main
   namespace: opa
-  literals:
-    - key=value
+  files:
+  - policies/main.rego
 
-# - name: opa-default-system-main
-#   namespace: opa
-#   files:
-#   - policies/main.rego
-
-# - name: istio
-#   namespace: opa
-#   files:
-#   - policies/istio.rego
+- name: istio
+  namespace: opa
+  files:
+  - policies/istio.rego
 
 generatorOptions:
   disableNameSuffixHash: true
