@@ -3,11 +3,6 @@ bases:
   - ../bases/cert-manager
 
 configMapGenerator:
-- name: opa-default-system-main
-  namespace: opa
-  files:
-  - policies/main.rego
-
 - name: istio
   namespace: opa
   files:

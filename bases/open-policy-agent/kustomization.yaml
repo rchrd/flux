@@ -2,3 +2,14 @@
 resources:
 - namespace.yaml
 - opa.yaml
+
+configMapGenerator:
+- name: opa-default-system-main
+  namespace: opa
+  files:
+  - policies/main.rego
+
+generatorOptions:
+  disableNameSuffixHash: true
+  labels:
+    openpolicyagent.org/policy: rego
