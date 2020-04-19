@@ -1,0 +1,6 @@
+---
+# https://cert-manager.io/docs/installation/kubernetes/#installing-with-helm
+resources:
+- cert-manager.crds.yaml
+- namespace.yaml
+- cert-manager.yaml

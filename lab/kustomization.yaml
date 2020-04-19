@@ -1,7 +1,6 @@
----
-resources:
-- namespace.yaml
-- opa.yaml
+bases:
+  - ../bases/open-policy-agent
+  - ../bases/cert-manager
 
 configMapGenerator:
 - name: opa-default-system-main
