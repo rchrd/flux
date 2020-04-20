@@ -1,6 +1,7 @@
 bases:
   - ../bases/open-policy-agent
   - ../bases/cert-manager
+  - ../bases/rbac
 
 configMapGenerator:
 - name: istio

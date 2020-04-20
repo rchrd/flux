@@ -1,0 +1,17 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: rbac-team
+rules:
+- apiGroups: [""]
+  resources: ["pods", "services", "configmaps", "secrets"]
+  verbs: ["get", "list", "patch", "update", "create", "delete"]
+- api_groups: ["batch", "extensions"]
+  resources: ["jobs", "cronjobs"]
+  verbs: ["get", "list", "watch", "create", "update", "patch", "delete"]
+- api_groups: ["extensions", "apps"]
+  resources: ["deployments"]
+  verbs: ["get", "list", "watch", "patch", "update", "create", "delete"]
+- api_groups: ["networking.istio.io"]
+  resources: ["virtualservices"]
+  verbs: ["get", "list", "patch", "update", "create", "delete"]

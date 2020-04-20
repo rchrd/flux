@@ -1,0 +1,13 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: read-pods
+  namespace: team_1
+subjects:
+- kind: Group
+  name: system:serviceaccounts:team_1
+  apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: ClusterRole
+  name: rbac-team
+  apiGroup: rbac.authorization.k8s.io
