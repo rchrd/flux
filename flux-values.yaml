@@ -1,0 +1,37 @@
+git:
+  url: git@github.com:rchrd/flux
+  branch: master
+  path: "clusters/lab,teams/lab"
+  pollInterval: 1m
+
+registry:
+  pollInterval: 1m
+
+sync:
+  state: secret
+
+syncGarbageCollection:
+  enabled: true
+
+manifestGeneration: true
+
+image:
+  repository: docker.io/fluxcd/flux
+  tag: 1.19.0
+
+# extraVolumeMounts:
+#   - name: istio-volume
+#     mountPath: /tmp/istio
+
+# extraVolumes:
+#   - name: istio-volume
+#     emptyDir: {}
+
+# initContainers:
+#   install-istio:
+#     image: "istio/istioctl:1.5.1"
+#     imagePullPolicy: "IfNotPresent"
+#     command: ['sh', '-c', 'cp /usr/local/bin/istioctl /tmp/istio/']
+#     volumeMounts:
+#       - mountPath: /tmp/istio
+#         name: istio-volume
