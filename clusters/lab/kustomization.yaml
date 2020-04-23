@@ -14,11 +14,11 @@ generatorOptions:
   labels:
     openpolicyagent.org/policy: rego
 
-# patches:
-# - patch: |-
-#     - op: replace
-#       path: /spec/values/imageTag
-#       value: 0.19.1
-#   target:
-#     kind: HelmRelease
-#     name: opa
+patches:
+- patch: |-
+    - op: replace
+      path: /spec/values/imageTag
+      value: 0.19.1
+  target:
+    kind: HelmRelease
+    name: opa
