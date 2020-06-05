@@ -24,7 +24,7 @@ helm upgrade -i flux fluxcd/flux \
 --namespace flux
 
 echo ">>> Installing Helm Operator"
-kubectl apply -f crds.yaml
+kubectl apply -f https://raw.githubusercontent.com/fluxcd/helm-operator/1.1.0/deploy/crds.yaml
 helm upgrade -i helm-operator fluxcd/helm-operator \
 --wait \
 --set git.ssh.secretName=flux-git-deploy \
