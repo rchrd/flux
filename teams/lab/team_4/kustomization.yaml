@@ -1,0 +1,22 @@
+bases:
+  - ../../../bases/team-default
+
+patches:
+- patch: |-
+    - op: replace
+      path: /metadata/name
+      value: team-4
+    - op: replace
+      path: /metadata/labels/istio-injection
+      value: disabled
+  target:
+    kind: Namespace
+- patch: |-
+    - op: replace
+      path: /metadata/namespace
+      value: team-4
+    - op: replace
+      path: /subjects/0/name
+      value: system:serviceaccounts:team-4
+  target:
+    kind: RoleBinding
