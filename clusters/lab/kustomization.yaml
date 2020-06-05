@@ -1,4 +1,5 @@
 bases:
+  - ../../bases/istio
   - ../../bases/open-policy-agent
   - ../../bases/cert-manager
   - ../../bases/rbac
