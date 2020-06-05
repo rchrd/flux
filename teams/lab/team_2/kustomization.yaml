@@ -1,0 +1,19 @@
+bases:
+  - ../../../bases/team-default
+
+patches:
+- patch: |-
+    - op: replace
+      path: /metadata/name
+      value: team-2
+  target:
+    kind: Namespace
+- patch: |-
+    - op: replace
+      path: /metadata/namespace
+      value: team-2
+    - op: replace
+      path: /subjects/0/name
+      value: system:serviceaccounts:team-2
+  target:
+    kind: RoleBinding
