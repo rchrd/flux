@@ -3,9 +3,11 @@ kind: RoleBinding
 metadata:
   name: read-pods
 subjects:
-- kind: Group
-  name: system:serviceaccounts:team
-  apiGroup: rbac.authorization.k8s.io
+- kind: ServiceAccount
+  name: team
+# - kind: Group
+#   name: system:serviceaccounts:team
+#   apiGroup: rbac.authorization.k8s.io
 roleRef:
   kind: ClusterRole
   name: rbac-team
