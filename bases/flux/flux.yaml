@@ -21,7 +21,7 @@ spec:
       - PLACEHOLDER
     serviceAccount:
       create: false
-      name: PLACEHOLDER
+      name: team
     clusterRole:
       create: false
     registry:

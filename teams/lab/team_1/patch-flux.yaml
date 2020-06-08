@@ -9,5 +9,3 @@ spec:
       path: "deployment"
     allowedNamespaces:
     - team-1
-    serviceAccount:
-      name: team-1
