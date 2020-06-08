@@ -1,6 +1,8 @@
 bases:
   - ../../../bases/team-default
 
+namespace: team-1
+
 patches:
 - patch: |-
     - op: replace
@@ -9,9 +11,6 @@ patches:
   target:
     kind: Namespace
 - patch: |-
-    - op: replace
-      path: /metadata/namespace
-      value: team-1
     - op: replace
       path: /subjects/0/name
       value: system:serviceaccounts:team-1
