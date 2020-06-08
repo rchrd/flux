@@ -1,0 +1,36 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: flux
+spec:
+  chart:
+    repository: https://charts.fluxcd.io
+    name: flux
+    version: "1.3.0"
+  values:  # https://hub.helm.sh/charts/fluxcd/flux
+    git:
+      url: PLACEHOLDER
+      branch: master
+      path: "PLACEHOLDER"
+      pollInterval: 1m
+      readonly: true
+    rbac:
+      create: false
+    allowedNamespaces:
+      - PLACEHOLDER
+    serviceAccount:
+      create: false
+      name: PLACEHOLDER
+    clusterRole:
+      create: false
+    registry:
+      disableScanning: true
+    sync:
+      state: secret
+    syncGarbageCollection:
+      enabled: true
+    manifestGeneration: false
+    image:
+      repository: docker.io/fluxcd/flux
+      tag: 1.19.0
