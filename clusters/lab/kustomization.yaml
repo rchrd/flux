@@ -1,4 +1,4 @@
-bases:
+resources:
   - ../../bases/istio
   - ../../bases/open-policy-agent
   - ../../bases/cert-manager
