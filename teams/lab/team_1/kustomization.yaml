@@ -1,19 +1,17 @@
 bases:
   - ../../../bases/team-default
+  - ../../../bases/flux
 
 namespace: team-1
 
 patches:
-- patch: |-
+- target:
+    kind: Namespace
+  patch: |-
     - op: replace
       path: /metadata/name
       value: team-1
-  target:
-    kind: Namespace
-- patch: |-
-    - op: replace
-      path: /subjects/0/name
-      value: system:serviceaccounts:team-1
-  target:
-    kind: RoleBinding
-    name: read-pods
+
+patchesStrategicMerge:
+- patch-role-binding.yaml
+- patch-flux.yaml

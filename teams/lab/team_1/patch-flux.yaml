@@ -1,0 +1,13 @@
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: flux
+spec:
+  values:
+    git:
+      url: git@github.com:rchrd/helloworld
+      path: "deployment"
+    allowedNamespaces:
+    - team-1
+    serviceAccount:
+      name: team-1
