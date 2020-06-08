@@ -4,11 +4,11 @@ git:
   path: "clusters/lab,teams/lab"
   pollInterval: 1m
 
-registry:
-  pollInterval: 1m
-
 sync:
   state: secret
+
+registry:
+  disableScanning: true
 
 syncGarbageCollection:
   enabled: true
